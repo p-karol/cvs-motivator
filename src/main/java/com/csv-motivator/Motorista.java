@@ -5,10 +5,19 @@ public class Motorista{
     private String Nome;
     private Veiculo Veiculo;
 
-     public Motorista(String CPF,String Nome, Veiculo Veiculo){
+    enum FormaPagamento {
+        DINHEIRO,
+        CARTAO,
+        TODAS;
+    }
+
+    private FormaPagamento Pagamento;
+
+     public Motorista(String CPF,String Nome, Veiculo Veiculo, FormaPagamento Pagamento){
             this.CPF = CPF;
             this.Nome = Nome;
             this.Veiculo = Veiculo;
+            this.Pagamento = Pagamento;
     }
 
     public String getCPF() {
@@ -34,5 +43,18 @@ public class Motorista{
     public void setVeiculo(Veiculo veiculo) {
         this.Veiculo = veiculo;
     }
+
+    public void setPagamento(FormaPagamento Pagamento){
+        this.Pagamento = Pagamento;
+    }
+
+    public FormaPagamento getPagamento(){
+        return this.Pagamento;
+    } 
+    
+    
+
+
+
    
 }
