@@ -16,7 +16,7 @@ public class PersistenciaMotoristas{
 
     //cpf,nome,veiculo,pagamento
     //00742165035,Priscilla,ABC1J23,CARTAO
-    String CPF,String Nome, Veiculo Veiculo, FormaPagamento Pagament
+    //String CPF,String Nome, Veiculo Veiculo, FormaPagamento Pagament
 
 
     public List<Motorista> carregaMotoristas(){
@@ -34,7 +34,7 @@ public class PersistenciaMotoristas{
                 String cor = csvRecord.get(2);
                 String Pagamento = csvRecord.get(3);
                 Motorista m = new Motorista(CPF, Nome, Veiculo, Pagamento);
-                o
+                
                 lista.add(m);
         }
     }
