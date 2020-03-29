@@ -51,10 +51,5 @@ public class Motorista{
     public FormaPagamento getPagamento(){
         return this.Pagamento;
     } 
-    
-    
-
-
-
    
 }
