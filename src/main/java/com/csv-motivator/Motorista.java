@@ -7,6 +7,8 @@ public class Motorista{
 
      public Motorista(String CPF,String Nome, Veiculo Veiculo){
             this.CPF = CPF;
+            this.Nome = Nome;
+            this.Veiculo = Veiculo;
     }
 
     public String getCPF() {
@@ -32,7 +34,5 @@ public class Motorista{
     public void setVeiculo(Veiculo veiculo) {
         this.Veiculo = veiculo;
     }
-
-
    
 }
