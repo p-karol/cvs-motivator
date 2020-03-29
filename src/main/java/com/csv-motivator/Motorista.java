@@ -10,30 +10,29 @@ public class Motorista{
     }
 
     public String getCPF() {
-        return CPF;
+        return this.CPF;
     }
 
-    public void setCPF(String cPF) {
-        CPF = cPF;
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
     }
 
     public String getNome() {
-        return Nome;
+        return this.Nome;
     }
 
     public void setNome(String nome) {
-        Nome = nome;
+        this.Nome = nome;
     }
 
     public Veiculo getVeiculo() {
-        return Veiculo;
+        return this.Veiculo;
     }
 
     public void setVeiculo(Veiculo veiculo) {
-        Veiculo = veiculo;
+        this.Veiculo = veiculo;
     }
 
-    
 
    
 }
