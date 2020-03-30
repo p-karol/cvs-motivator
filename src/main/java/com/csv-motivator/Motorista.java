@@ -50,6 +50,12 @@ public class Motorista{
 
     public FormaPagamento getPagamento(){
         return this.Pagamento;
-    } 
-   
+    }
+
+    @Override
+    public String toString() {
+        return "Motorista [CPF=" + CPF + ", Nome=" + Nome + ", Pagamento=" + Pagamento + "]";
+    }
+
+    
 }

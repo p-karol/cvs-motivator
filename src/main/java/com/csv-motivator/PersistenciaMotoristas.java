@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 
-public class PersistenciaMotoristas{
+public PersistenciaMotoristas{
     private static final String SAMPLE_CSV_FILE_PATH = "motoristas.dat";
 
     //cpf,nome,veiculo,pagamento
