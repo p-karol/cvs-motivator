@@ -23,5 +23,9 @@ public class App{
         for (Veiculo v : veiculos){
             System.out.println(v.toString());
         }  
+
+        if(p.persisteVeiculos(veiculos)){
+            System.out.println("Gravou a cena \n");
+        }
      }
 }

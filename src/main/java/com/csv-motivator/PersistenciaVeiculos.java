@@ -36,4 +36,30 @@ public class PersistenciaVeiculos{
         return lista;
         } 
     } 
+
+    public boolean persisteVeiculos(List<Veiculo> Veiculos) {
+        try {
+            // create a writer
+            //Writer writer = Files.newBufferedWriter(Paths.get(sample_csv_file_path));
+            Writer writer = Files.newBufferedWriter(Paths.get("./veiculos_novo.dat"));
+        
+            // write CSV file placa,marca,cor,categoria
+            CSVPrinter printer = CSVFormat.DEFAULT.withHeader("placa", "marca", "cor", "categoria").print(writer);
+        
+            // write list to file
+            printer.printRecords(Veiculos);
+        
+            // flush the stream
+            printer.flush();
+        
+            // close the writer
+            writer.close();
+
+            return true;
+        
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return false;
+        }
+    }    
 }
