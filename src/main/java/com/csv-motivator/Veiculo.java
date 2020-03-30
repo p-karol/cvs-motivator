@@ -1,47 +1,56 @@
 public class Veiculo{
-    private final double consumoPorLitro = 10;
-    private Placa placa;
-    private double combustivel;
+    private String placa;
+    private String marca; 
+    private String cor; 
+    private String categoria;
     
-    public Veiculo(Placa placa){
+    public Veiculo(String placa, String marca, String cor, String categoria){
+        
         this.placa = placa;
-        combustivel = 0;
+        this.marca = marca;
+        this.cor = cor;
+        this.categoria = categoria;
     }
 
-    public void setPais(String pais){
-        placa.setPais(pais);
-    }
-
-    public Placa getPlaca(){
+    public String getPlaca() {
         return placa;
     }
 
-    public double getCombustivelNoTanque(){
-        return combustivel;
+    public void setPlaca(String placa) {
+        this.placa = placa;
     }
 
-    public double abastece(double litros){
-        if (litros > 0.0){
-            combustivel += litros;
-        }
-        return combustivel;
+    public String getMarca() {
+        return marca;
     }
 
-    public double dirige(double distancia){
-        // Calcula o consumo para a distancia
-        double consumo = distancia / consumoPorLitro;
-        // Diminui o combustivel gasto e retorna a distancia percorrida
-        if (combustivel >= consumo){
-            combustivel -= consumo;
-            return distancia;
-        }else{
-            double distPossivel = combustivel * consumoPorLitro;
-            combustivel = 0.0;
-            return distPossivel;
-        }
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
-    public String toString(){
-        return "Placa: "+getPlaca()+", combustivel no tanque: "+getCombustivelNoTanque();
+    public String getCor() {
+        return cor;
     }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    @Override
+    public String toString() {
+        return "Veiculo [categoria=" + categoria + ", cor=" + cor + ", marca=" + marca + ", placa=" + placa + "]";
+    }
+
+    
+
+    
+
 }
