@@ -21,7 +21,7 @@ public class App{
         veiculos = p.carregaVeiculos();   
         
         for (Veiculo v : veiculos){
-            v.toString();
+            System.out.println(v.toString());
         }  
      }
 }

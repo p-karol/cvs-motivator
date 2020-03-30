@@ -9,7 +9,7 @@ public class Veiculo{
         this.placa = placa;
         this.marca = marca;
         this.cor = cor;
-        this.placa = categoria;
+        this.categoria = categoria;
     }
 
     public String getPlaca() {
