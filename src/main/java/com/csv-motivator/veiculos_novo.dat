@@ -1,0 +1,13 @@
+placa,marca,cor,categoria
+"Veiculo [categoria=categoria, cor=cor, marca=marca, placa=placa]"
+"Veiculo [categoria=SIMPLES, cor=BRANCO, marca=WV, placa=ABC1J23]"
+"Veiculo [categoria=NORMAL, cor=PRATA, marca=HONDA, placa=IDZ4J23]"
+"Veiculo [categoria=NORMAL, cor=PRETO, marca=TOYOTA, placa=JJW8L44]"
+"Veiculo [categoria=NORMAL, cor=AZUL, marca=CHEVROLET, placa=JWQ5K99]"
+"Veiculo [categoria=SIMPLES, cor=VERMELHO, marca=FIAT, placa=OLE9J18]"
+"Veiculo [categoria=NORMAL, cor=VERDE, marca=FORD, placa=AKK3K73]"
+"Veiculo [categoria=LUXO, cor=PRETO, marca=LEXUS, placa=POO1T28]"
+"Veiculo [categoria=LUXO, cor=PRATA, marca=MERCEDES, placa=TPR1G28]"
+"Veiculo [categoria=SIMPLES, cor=BRANCO, marca=VW, placa=FUS6C00]"
+"Veiculo [categoria=NORMAL, cor=ROXO, marca=NISSAN, placa=IWY7G47]"
+"Veiculo [categoria=SIMPLES, cor=AMARELO, marca=FIAT, placa=XYZ2W11]"

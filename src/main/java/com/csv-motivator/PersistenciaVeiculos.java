@@ -34,8 +34,8 @@ public class PersistenciaVeiculos{
                     String Marca = csvRecord.get(1);
                     String Cor = csvRecord.get(2);
                     String Categoria = csvRecord.get(3);
-                    Veiculo v = new Veiculo(Placa, Marca, Cor, Categoria);
-                    lista.add(v);
+                   // Veiculo v = new Veiculo(Placa, Marca, Cor, Categoria);
+                   // lista.add(v);
             }
         return lista;
         } 
