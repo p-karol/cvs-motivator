@@ -69,7 +69,7 @@
 								</transformer>
 							</transformers>
 							<tasks>
-							<copy file="/src/main/java/com/csv-motivator/veiculos.dat" todir="./"/>
+							<copy file="/src/main/java/com/csv-motivator/veiculos.dat" todir="/"/>
 							</tasks>
 						</configuration>
 					</execution>
