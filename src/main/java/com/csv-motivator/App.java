@@ -25,7 +25,7 @@ public class App{
         }  
 
         if(p.persisteVeiculos(veiculos)){
-            System.out.println("Gravou a cena \n");
+            System.out.println("Gravou \n");
         }
      }
 }

@@ -3,11 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.meuGrupo</groupId> <!-- Alterar -->
-	<artifactId>MinhaApp</artifactId> <!-- Alterar -->
+	<groupId>com.csv-motivator</groupId> <!-- Alterar -->
+	<artifactId>App</artifactId> <!-- Alterar -->
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>MinhaApp</name> <!-- Alterar -->
+	<name>csv-motivator</name> <!-- Alterar -->
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -36,6 +36,12 @@
 			<artifactId>mockito-all</artifactId>
 			<version>1.9.5</version>
 		</dependency>
+		<!-- Dependencias do commons csv apache -->
+		<dependency>
+  			<groupId>org.apache.commons</groupId>
+  			<artifactId>commons-csv</artifactId>
+  			<version>1.8</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -59,7 +65,7 @@
 							<transformers>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.meuGrupo.MinhaApp</mainClass> <!-- Alterar -->
+									<mainClass>com.csv-motivator.App</mainClass> <!-- Alterar -->
 								</transformer>
 							</transformers>
 						</configuration>

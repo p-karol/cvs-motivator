@@ -13,11 +13,11 @@ public class Motorista{
 
     private FormaPagamento Pagamento;
 
-     public Motorista(String CPF,String Nome, Veiculo Veiculo, FormaPagamento Pagamento){
+     public Motorista(String CPF,String Nome, Veiculo Veiculo, String Pagamento){
             this.CPF = CPF;
             this.Nome = Nome;
             this.Veiculo = Veiculo;
-            this.Pagamento = Pagamento;
+            this.Pagamento = FormaPagamento.valueOf(Pagamento);
     }
 
     public String getCPF() {

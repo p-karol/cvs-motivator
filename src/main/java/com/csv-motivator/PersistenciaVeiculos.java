@@ -9,6 +9,10 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
+import static java.nio.file.StandardOpenOption.*;
+import static java.nio.file.StandardOpenOption.CREATE;
+import static java.nio.file.StandardOpenOption.APPEND;
+
 
 
 public class PersistenciaVeiculos{
@@ -30,8 +34,8 @@ public class PersistenciaVeiculos{
                     String Marca = csvRecord.get(1);
                     String Cor = csvRecord.get(2);
                     String Categoria = csvRecord.get(3);
-                    Veiculo v = new Veiculo(Placa, Marca, Cor, Categoria);
-                    lista.add(v);
+                   // Veiculo v = new Veiculo(Placa, Marca, Cor, Categoria);
+                   // lista.add(v);
             }
         return lista;
         } 

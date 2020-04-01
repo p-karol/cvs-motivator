@@ -11,32 +11,46 @@ import java.util.List;
 import java.util.ArrayList;
 
 
-public PersistenciaMotoristas{
+public class PersistenciaMotoristas{
     private static final String SAMPLE_CSV_FILE_PATH = "motoristas.dat";
+
+
+    enum FormaPagamento {
+        DINHEIRO,
+        CARTAO,
+        TODAS;
+    }
 
     //cpf,nome,veiculo,pagamento
     //00742165035,Priscilla,ABC1J23,CARTAO
     //String CPF,String Nome, Veiculo Veiculo, FormaPagamento Pagament
 
 
-    public List<Motorista> carregaMotoristas(){
-    
-        List<Motorista> lista = new ArrayList<Motorista>();
-        Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
-        CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+    public List<Motorista> carregaMotoristas() throws IOException{
+        
+        List<Motorista> lista = new ArrayList<Motorista>(); 
+        
+        try (
+            Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+        ) {
     
         for (CSVRecord csvRecord : csvParser) {
                 // Accessing Values by Column Index
                 String CPF = csvRecord.get(0);
                 String Nome = csvRecord.get(1);
-                Veiculo Veiculo = new Veiculo(csvRecord.get(2));
+                Veiculo Veiculo = new Veiculo(csvRecord.get(2), "Sentra", "Preto", "Sedan");
                 String Placa = Veiculo.getPlaca();
                 String cor = csvRecord.get(2);
                 String Pagamento = csvRecord.get(3);
+                //FormaPagamento Pagamento = FormaPagamento.DINHEIRO;
                 Motorista m = new Motorista(CPF, Nome, Veiculo, Pagamento);
                 
                 lista.add(m);
         }
+       } 
+
+        return lista;
     }
 
  }
