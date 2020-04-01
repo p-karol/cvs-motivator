@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.csv-motivator</groupId> <!-- Alterar -->
-	<artifactId>csv-motivator</artifactId> <!-- Alterar -->
+	<artifactId>App</artifactId> <!-- Alterar -->
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>App</name> <!-- Alterar -->
+	<name>csv-motivator</name> <!-- Alterar -->
 	<url>http://maven.apache.org</url>
 
 	<properties>
