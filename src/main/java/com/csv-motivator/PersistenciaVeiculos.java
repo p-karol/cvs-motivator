@@ -41,6 +41,19 @@ public class PersistenciaVeiculos{
         } 
     } 
 
+    public Veiculo getVeiculoByPlaca(String placa) {
+        List<Veiculo> lista = new ArrayList<Veiculo>();
+        lista = this.carregaVeiculos();
+
+        for each (Veiculo v : lista){
+            if (v.getPlaca() == placa) {
+               return v;
+            }
+         }
+    } 
+
+
+
     public boolean persisteVeiculos(List<Veiculo> Veiculos) {
         try {
             // create a writer

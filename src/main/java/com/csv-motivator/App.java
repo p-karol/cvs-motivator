@@ -21,11 +21,12 @@ public class App{
         veiculos = p.carregaVeiculos();   
         
         for (Veiculo v : veiculos){
+            System.out.println("Lendo arquivo CSV veiculos.dat"); 
             System.out.println(v.toString());
         }  
 
         if(p.persisteVeiculos(veiculos)){
-            System.out.println("Gravou \n");
+            System.out.println("Gravando arquivo CSV veiculos_novo.dat \n");
         }
      }
 }

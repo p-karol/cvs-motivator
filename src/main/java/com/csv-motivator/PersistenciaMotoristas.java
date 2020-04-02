@@ -28,24 +28,21 @@ public class PersistenciaMotoristas{
 
     public List<Motorista> carregaMotoristas() throws IOException{
         
-        List<Motorista> lista = new ArrayList<Motorista>(); 
+        List<Motorista> lista = new ArrayList<Motorista>();
+        PersistenciaVeiculos p = new PersistenciaVeiculos();
         
         try (
             Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
         ) {
-    
+   
         for (CSVRecord csvRecord : csvParser) {
                 // Accessing Values by Column Index
                 String CPF = csvRecord.get(0);
                 String Nome = csvRecord.get(1);
-                Veiculo Veiculo = new Veiculo(csvRecord.get(2), "Sentra", "Preto", "Sedan");
-                String Placa = Veiculo.getPlaca();
-                String cor = csvRecord.get(2);
+                Veiculo Veiculo = p.getVeiculoByPlaca(csvRecord.get(2));
                 String Pagamento = csvRecord.get(3);
-                //FormaPagamento Pagamento = FormaPagamento.DINHEIRO;
                 Motorista m = new Motorista(CPF, Nome, Veiculo, Pagamento);
-                
                 lista.add(m);
         }
        } 
