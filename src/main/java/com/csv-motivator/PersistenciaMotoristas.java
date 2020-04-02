@@ -33,7 +33,7 @@ public class PersistenciaMotoristas{
         
         try (
             Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
-            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.RFC4180.withFirstRecordAsHeader());
         ) {
    
         for (CSVRecord csvRecord : csvParser) {
