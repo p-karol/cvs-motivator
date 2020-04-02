@@ -46,7 +46,7 @@ public class Veiculo{
 
     @Override
     public String toString() {
-        return "Veiculo [categoria=" + categoria + ", cor=" + cor + ", marca=" + marca + ", placa=" + placa + "]";
+        return categoria + "," + cor + "," + marca + "," + placa;
     }
 
     
