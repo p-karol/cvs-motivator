@@ -38,6 +38,27 @@ public class App{
         for (Motorista m : motoristas){
             System.out.println(m.toString());
         } 
+        
+        if(pm.persisteMotoristas(motoristas)){
+            System.out.println("\n Arquivo CSV motoristas_novo.dat gravado com sucesso \n");
+        }
+
+        List<Passageiro> passageiros = new ArrayList<Passageiro>();
+        PersistenciaPassageiros pp = new PersistenciaPassageiros();
+        passageiros = pp.carregaPassageiros(); 
+
+        System.out.println("Lendo arquivo CSV passageiros.dat");
+        for (Passageiro pa : passageiros){
+            System.out.println(pa.toString());
+        } 
+        
+        if(pp.persistePassageiros(passageiros)){
+            System.out.println("\n Arquivo CSV passageiros_novo.dat gravado com sucesso \n");
+        } 
+
+
+
+
 
      }
 }
