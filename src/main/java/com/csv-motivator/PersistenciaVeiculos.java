@@ -41,17 +41,19 @@ public class PersistenciaVeiculos{
         } 
     } 
 
-    public Veiculo getVeiculoByPlaca(String placa) {
-        List<Veiculo> lista = new ArrayList<Veiculo>();
-        lista = this.carregaVeiculos();
-
-        for each (Veiculo v : lista){
+    public Veiculo getVeiculoByPlaca(String placa) throws IOException {
+        
+        
+        for (Veiculo v : carregaVeiculos()){
             if (v.getPlaca() == placa) {
                return v;
             }
          }
-    } 
+         return new Veiculo("Não encontrada", "N/A", "N/A", "N/A");
+ 
+        } 
 
+    //}
 
 
     public boolean persisteVeiculos(List<Veiculo> Veiculos) {

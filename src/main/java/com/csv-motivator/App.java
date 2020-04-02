@@ -18,15 +18,26 @@ public class App{
 
         List<Veiculo> veiculos = new ArrayList<Veiculo>();
         PersistenciaVeiculos p = new PersistenciaVeiculos();
-        veiculos = p.carregaVeiculos();   
+        veiculos = p.carregaVeiculos(); 
+       
         
+        System.out.println("Lendo arquivo CSV veiculos.dat"); 
         for (Veiculo v : veiculos){
-            System.out.println("Lendo arquivo CSV veiculos.dat"); 
             System.out.println(v.toString());
         }  
 
         if(p.persisteVeiculos(veiculos)){
             System.out.println("Gravando arquivo CSV veiculos_novo.dat \n");
         }
+
+        List<Motorista> motoristas = new ArrayList<Motorista>();
+        PersistenciaMotoristas pm = new PersistenciaMotoristas();
+        motoristas = pm.carregaMotoristas(); 
+        
+        System.out.println("Lendo arquivo CSV veiculos.dat");
+        for (Motorista m : motoristas){
+            System.out.println(m.toString());
+        } 
+
      }
 }
