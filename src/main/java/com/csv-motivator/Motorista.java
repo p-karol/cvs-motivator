@@ -54,7 +54,7 @@ public class Motorista{
 
     @Override
     public String toString() {
-        return "Motorista [CPF=" + CPF + ", Nome=" + Nome + ", Pagamento=" + Pagamento + "]";
+        return CPF + "," + Nome + "," + Veiculo.toString() + "," + Pagamento;
     }
 
     

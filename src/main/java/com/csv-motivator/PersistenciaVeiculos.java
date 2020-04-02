@@ -41,6 +41,22 @@ public class PersistenciaVeiculos{
         } 
     } 
 
+    public Veiculo getVeiculoByPlaca(String placa) throws IOException {
+        
+        
+        for (Veiculo v : carregaVeiculos()){
+
+            if (v.getPlaca().equals(placa)) {
+                return v;
+            }
+         }
+         return new Veiculo("Não encontrada", "N/A", "N/A", "N/A");
+ 
+        } 
+
+    //}
+
+
     public boolean persisteVeiculos(List<Veiculo> Veiculos) {
         try {
             // create a writer
@@ -48,7 +64,8 @@ public class PersistenciaVeiculos{
             Writer writer = Files.newBufferedWriter(Paths.get("./veiculos_novo.dat"));
         
             // write CSV file placa,marca,cor,categoria
-            CSVPrinter printer = CSVFormat.DEFAULT.withHeader("placa", "marca", "cor", "categoria").print(writer);
+            //CSVPrinter printer = CSVFormat.DEFAULT.withHeader("placa", "marca", "cor", "categoria").print(writer);
+            CSVPrinter printer = CSVFormat.DEFAULT.print(writer);
         
             // write list to file
             printer.printRecords(Veiculos);
