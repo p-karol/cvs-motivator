@@ -54,7 +54,7 @@ public class Motorista{
 
     @Override
     public String toString() {
-        return CPF + "," + Nome + "," + Pagamento;
+        return CPF + "," + Nome + "," + Veiculo.toString() + "," + Pagamento;
     }
 
     

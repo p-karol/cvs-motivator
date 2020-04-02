@@ -45,8 +45,9 @@ public class PersistenciaVeiculos{
         
         
         for (Veiculo v : carregaVeiculos()){
-            if (v.getPlaca() == placa) {
-               return v;
+
+            if (v.getPlaca().equals(placa)) {
+                return v;
             }
          }
          return new Veiculo("Não encontrada", "N/A", "N/A", "N/A");

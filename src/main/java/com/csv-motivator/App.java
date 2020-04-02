@@ -27,14 +27,14 @@ public class App{
         }  
 
         if(p.persisteVeiculos(veiculos)){
-            System.out.println("Gravando arquivo CSV veiculos_novo.dat \n");
+            System.out.println("\n Arquivo CSV veiculos_novo.dat gravado com sucesso \n");
         }
 
         List<Motorista> motoristas = new ArrayList<Motorista>();
         PersistenciaMotoristas pm = new PersistenciaMotoristas();
         motoristas = pm.carregaMotoristas(); 
         
-        System.out.println("Lendo arquivo CSV veiculos.dat");
+        System.out.println("Lendo arquivo CSV motoristas.dat");
         for (Motorista m : motoristas){
             System.out.println(m.toString());
         } 
